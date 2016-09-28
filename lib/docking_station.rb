@@ -7,8 +7,11 @@ class DockingStation
 
   end
 
-  attr_reader :bike #Use method #bike to check bike docked at station
+  #attr_reader :bike #Use method #bike to check bike docked at station
 
+  def bike
+    @bike_array.pop #shows all bikes at the station
+  end
 
   def release_bike
     fail 'No bikes available' unless !@bike_array.empty?
