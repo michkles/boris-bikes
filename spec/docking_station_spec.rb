@@ -29,12 +29,11 @@ expect(subject.bike.pop).to eq bike
     it 'returns error when docking station is full' do
     #subject.dock(Bike.new)
       bike = Bike.new
-      20.times {subject.dock Bike.new}
-      expect {subject.dock(bike)}.to raise_error 'Docking station at capacity'
+     #DockingStation::DEFAULT_CAPACITY.times do
+      (21).times do
+       subject.dock(bike)
+      #expect {subject.dock(bike)}.to raise_error 'Docking station at capacity'
     end
   end
-
-
-
-
+ end
 end
