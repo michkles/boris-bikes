@@ -9,6 +9,7 @@ describe DockingStation do
 
 
     describe 'initialization' do
+<<<<<<< HEAD
       subject { DockingStation.new }
       let(:bike) { Bike.new }
       it 'defaults capacity' do
@@ -19,6 +20,15 @@ describe DockingStation do
       end
     end
 
+=======
+  it 'has a variable capacity' do
+    docking_station = DockingStation.new(50)
+    50.times { docking_station.dock Bike.new }
+    p docking_station
+    expect{ docking_station.dock Bike.new }.to raise_error 'Docking station full'
+  end
+end
+>>>>>>> 29975f91b1e215cc83b6a1b9404f39673bd8dfa5
 
 
 =begin
@@ -37,7 +47,11 @@ expect(subject.bike.pop).to eq bike
     expect(bike).to be_working
   end
 
+<<<<<<< HEAD
   #it { is_expected.to respond_to :bike }
+=======
+  it { is_expected.to respond_to (:bike) }
+>>>>>>> 29975f91b1e215cc83b6a1b9404f39673bd8dfa5
 
   describe '#release_bike' do
     it 'returns error when no bike available' do

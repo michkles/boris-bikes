@@ -24,8 +24,13 @@ DEFAULT_CAPACITY = 20
 
    def dock(bike)
      # We need to return the bike we dock
+<<<<<<< HEAD
      fail 'Docking station at capacity' if full?
      bike_array << bike
+=======
+     fail 'Docking station full' if full?
+     @bike_array.push(bike)
+>>>>>>> 29975f91b1e215cc83b6a1b9404f39673bd8dfa5
   end
 
 #private
@@ -33,7 +38,11 @@ DEFAULT_CAPACITY = 20
 attr_reader :bike_array
 
   def full?
+<<<<<<< HEAD
     bike_array.count >= capacity
+=======
+    @bike_array.count >= capacity
+>>>>>>> 29975f91b1e215cc83b6a1b9404f39673bd8dfa5
   end
 
   def empty?
