@@ -14,7 +14,7 @@ DEFAULT_CAPACITY = 20
 
 
   #attr_reader :bike #Use method #bike to check bike docked at station
-  #
+
   def bike
     @bike_array #shows all bikes at the station
   end
