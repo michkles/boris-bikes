@@ -1,14 +1,17 @@
 # require_relative 'bike'
 
 class DockingStation
-  
+
+attr_accessor :capacity
 DEFAULT_CAPACITY = 20
 
-  def initialize
-    @bike_array = Array.new
-
+  def initialize(capacity = DEFAULT_CAPACITY)
+    @bike_array = []
+    @capacity = capacity
 
   end
+
+
 
   #attr_reader :bike #Use method #bike to check bike docked at station
 
