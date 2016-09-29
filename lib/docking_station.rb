@@ -26,14 +26,14 @@ DEFAULT_CAPACITY = 20
 
    def dock(bike)
      # We need to return the bike we dock
-     fail 'Docking station at capacity' if full?
+     fail 'Docking station full' if full?
      @bike_array.push(bike)
   end
 
 private
 
   def full?
-    @bike_array.count >= DEFAULT_CAPACITY
+    @bike_array.count >= capacity
   end
 
   def empty?
