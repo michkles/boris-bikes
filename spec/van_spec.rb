@@ -42,4 +42,6 @@ describe Van do
     subject.deliver(garage)
   end
 
+  
+
 end
