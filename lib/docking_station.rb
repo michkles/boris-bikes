@@ -19,6 +19,10 @@ DEFAULT_CAPACITY = 20
     bike_array.pop
   end
 
+  def release_broken_bike
+    broken_bikes
+  end
+
    def dock(bike)
 
     fail 'Docking station full' if full?
