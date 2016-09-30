@@ -4,6 +4,6 @@ class Bike
   end
 
   def report_broken
-    
+
   end
 end
