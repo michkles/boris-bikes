@@ -13,4 +13,13 @@ describe Garage  do
   end
 
   it { is_expected.to respond_to :fix_bikes }
+
+  it 'should fix the broken bikes'
+    bike=Bike.new
+    subject.collect(bike)
+    subject.fix_bikes
+    expect(subject.broken_bikes).to eq 0
+
+
+
 end
