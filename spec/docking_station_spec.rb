@@ -54,8 +54,8 @@ let(:bike) { double(:bike, :working => true) }
 
   it "recognises a broken bike" do
     allow(bike).to receive_messages(
-    :report_broken => false,
-    :working => false)
+      :report_broken => false,
+      :working => false)
     broken_bike = bike
     broken_bike.report_broken
     expect(subject.dock(broken_bike)).to eq "Thank you for reporting and returning this broken bike"
