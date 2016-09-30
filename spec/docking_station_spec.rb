@@ -61,7 +61,15 @@ let(:bike) { double(:bike, :working => true) }
     expect(subject.dock(broken_bike)).to eq "Thank you for reporting and returning this broken bike"
 
     end
- end
+  end
 
+
+  describe '#release_broken_bikes' do
+    it 'releases broken bikes' do
+      broken_bike = double(:bike, working: false, report_broken: false)
+      subject.dock(broken_bike)
+      expect(subject.release_broken_bike).to eq broken_bike
+    end
+  end
 
 end

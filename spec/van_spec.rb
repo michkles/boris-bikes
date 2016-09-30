@@ -6,12 +6,22 @@ describe Van do
     expect(subject).to respond_to :collect
   end
 
+
   it 'should know there are no bikes on board' do
-    expect(van.broken_bike_number).to eq 0
+    expect(subject.broken_bike_number).to eq 0
   end
 
 
+
 end
+=begin
+  it 'should know there is 1 bike on board' do
+    broken_bike = double(:bike, working: false)
+    expect(subject.broken_bike_number).to eq broken_bike
+  end
+=end
+
+
 
 
 =begin
