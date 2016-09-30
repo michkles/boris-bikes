@@ -20,6 +20,8 @@ DEFAULT_CAPACITY = 20
   end
 
   def release_broken_bike
+
+    fail "no broken bikes available" unless broken_bikes.count > 0
     broken_bikes
   end
 
