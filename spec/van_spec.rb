@@ -33,4 +33,4 @@ describe Van do
     expect(subject.broken_bike_number).to eq 1
   end
 
-end  
+end
