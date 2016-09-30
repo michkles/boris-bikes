@@ -8,7 +8,7 @@ class Van
   end
 
   def deliver(garage)
-   
+    garage.collect(@van_broken_bike)
   end
 
 end

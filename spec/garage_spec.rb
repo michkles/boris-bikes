@@ -11,4 +11,6 @@ describe Garage  do
     subject.collect(bike)
     expect(subject.broken_bikes).to eq bike
   end
+
+  it { is_expected.to respond_to :fix_bikes }
 end
