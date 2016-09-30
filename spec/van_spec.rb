@@ -2,10 +2,25 @@ require 'van'
 
 
 describe Van do
-  it 'should collect broken bikes from docking station' do
-
+  it 'should respond to collect method' do
     expect(subject).to respond_to :collect
-  end  
+  end
+
+  it 'should know there are no bikes on board' do
+    expect(van.broken_bike_number).to eq 0
+  end
 
 
 end
+
+
+=begin
+it 'should collect broken bikes from docking station' do
+  van = Van.new
+  broken_bike = double(:bike, working: false)
+  docking_station = DockingStation.new
+  docking_station.dock(broken_bike)
+  expect(van.collect).to eq broken_bike
+end
+
+=end
