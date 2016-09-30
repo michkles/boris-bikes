@@ -40,8 +40,10 @@ describe Van do
     docking_station.dock(broken_bike)
     subject.collect(docking_station)
     subject.deliver(garage)
+    expect(garage.broken_bikes).to eq [broken_bike]
   end
 
-  
+
+
 
 end
