@@ -33,4 +33,13 @@ describe Van do
     expect(subject.broken_bike_number).to eq 1
   end
 
+  it 'should deliver bikes to Garage' do
+    broken_bike = double(:bike, working: false)
+    docking_station = DockingStation.new
+    garage = Garage.new
+    docking_station.dock(broken_bike)
+    subject.collect(docking_station)
+    subject.deliver(garage)
+  end
+
 end
