@@ -48,7 +48,7 @@ describe DockingStation do
     it "recognises a broken bike" do
       broken_bike = Bike.new
       broken_bike.report_broken
-      expect{subject.dock(broken_bike)}.to eq "Thank you for reporting and returning this broken bike"
+      expect(subject.dock(broken_bike)).to eq "Thank you for reporting and returning this broken bike"
 
     end
  end
